@@ -1,5 +1,6 @@
 import * as type from "../types";
 
+//get data
 export function getUsers() {
   return {
     type: type.GET_USERS_REQUESTED,
@@ -21,3 +22,28 @@ export function getUsersFailed(error) {
     payload: error,
   };
 }
+//get ended---------------------------------------------
+
+
+//delete data
+export function getUserDelete(id){
+  return{ 
+    type: type.GET_USERS_DELETE,
+    id:id
+  }
+}
+
+export function getUserDeleteSuccess(data){
+  return{ 
+    type: type.GET_USERS_DELETE_SUCCESS,
+    payload: data
+  }
+}
+
+export function getUserDeleteFailed(error){
+  return{ 
+    type: type.GET_USERS_DELETE_FAILED,
+    payload: error
+  }
+}
+//delete ended---------------------------------------------
